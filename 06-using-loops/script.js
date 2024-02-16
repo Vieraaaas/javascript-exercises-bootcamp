@@ -22,3 +22,30 @@ console.log(oddNumbers(10, 33));
 
 console.log(oddNumbers(9, 12));
 // result should be: 9,11
+
+//02) charCount function
+// TODO: Implement the charCount function
+function charCount(word, character) {
+  let result = 0;
+  word = word.toLowerCase();
+  character = character.toLowerCase();
+  if (character.length > 1) {
+    return "Please only search for one single character!";
+  } else {
+    for (let i = 0; i < word.length; i++) {
+      if (word.charAt(i) === character) {
+        result += 1;
+      }
+    }
+  }
+  return result;
+}
+
+console.log(charCount("hello", "l"));
+// result should be: 2
+
+console.log(charCount("mama", "m"));
+// result should be: 2
+
+console.log(charCount("Resümee", "e"));
+// result should be: 3
